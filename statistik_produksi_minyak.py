@@ -174,13 +174,13 @@ for i in range(len(negara)):
 # negara = negara.sort_values(by=['produksi'], ascending=False)
 # daftar_negara = negara['kode_negara'].values.tolist()
             
-for j in range(len(list_kode_negara)):
-    if negara['produksi'].values.tolist()[-1]==0 and daftar_negara[-1]==list_kode_negara[j]:
-        nama = data[j]['name']
-        kode = data[j]['alpha-3']
-        region = data[j]['region']
-        sub_region = data[j]['sub-region']
-        right_col.markdown(f"**Salah satu negara dengan jumlah produksi sama dengan nol pada tahun {tahun}: ** \n {nama}, {kode}, {region}, {sub_region}")
+# for j in range(len(list_kode_negara)):
+#     if negara['produksi'].values.tolist()[-1]==0 and daftar_negara[-1]==list_kode_negara[j]:
+#         nama = data[j]['name']
+#         kode = data[j]['alpha-3']
+#         region = data[j]['region']
+#         sub_region = data[j]['sub-region']
+#         right_col.markdown(f"**Salah satu negara dengan jumlah produksi sama dengan nol pada tahun {tahun}: ** \n {nama}, {kode}, {region}, {sub_region}")
 
 #Jika ingin menanmpilkan seluruh negara dengan produksi kumulatif sama dengan nol
 country = df.groupby(['kode_negara'])['produksi'].sum().reset_index()
